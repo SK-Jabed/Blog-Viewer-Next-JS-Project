@@ -3,9 +3,9 @@ import Link from "next/link";
 import {
   RegisterLink,
   LoginLink,
-  LogoutLink
+  LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/dist/types/server";
+// import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/dist/types/server";
 
 const Navbar = () => {
   return (
@@ -35,8 +35,15 @@ const Navbar = () => {
             Login
           </button>
         )} */}
-            <button className="btn border-2 px-6 py-2">Login</button>
-            <button className="btn border-2 px-6 py-2">Login</button>
+            <LoginLink postLoginRedirectURL="/profile">
+              <button className="btn border-2 px-6 py-2">Login</button>
+            </LoginLink>
+            <RegisterLink postLoginRedirectURL="/profile">
+              <button className="btn border-2 px-6 py-2">Register</button>
+            </RegisterLink>
+            <LogoutLink>
+              <button className="btn border-2 px-6 py-2">Logout</button>
+            </LogoutLink>
           </div>
         </div>
       </div>
