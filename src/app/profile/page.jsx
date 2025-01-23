@@ -3,8 +3,6 @@
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { redirect } from "next/navigation";
 
-
-
 const ProfilePage = () => {
   const { isAuthenticated, isLoading } = useKindeBrowserClient();
 
