@@ -41,7 +41,7 @@ export default async function HomePage() {
           Explore Amazing Blogs
         </h1>
         <p className="text-lg text-gray-600">
-          Discover insightful articles and posts crafted just for you.
+          Discover insightful articles and posts.
         </p>
       </div>
 
