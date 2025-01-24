@@ -1,3 +1,42 @@
+// import Link from "next/link";
+
+// export default async function BlogDetails({ params }) {
+//   const { id } = params;
+
+//   // Fetch the blog details based on the ID
+//   const response = await fetch(
+//     `https://jsonplaceholder.typicode.com/posts/${id}`
+//   );
+//   const post = await response.json();
+
+//   return (
+//     <div className="min-h-screen bg-gray-100 pt-20 px-4">
+//       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+//         {/* Blog Header */}
+//         <div className="bg-blue-500 text-white p-6">
+//           <h1 className="text-3xl font-extrabold">{post.title}</h1>
+//         </div>
+
+//         {/* Blog Content */}
+//         <div className="p-6">
+//           <p className="text-gray-800 text-lg mb-4">{post.body}</p>
+//           <p className="text-gray-500 text-sm">Author ID: {post.userId}</p>
+//         </div>
+
+//         {/* Back Button */}
+//         <div className="p-6 border-t border-gray-200">
+//           <Link href="/">
+//             <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-200">
+//               Back to Blogs
+//             </button>
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
 import Link from "next/link";
 
 export default async function BlogDetails({ params }) {
@@ -10,23 +49,29 @@ export default async function BlogDetails({ params }) {
   const post = await response.json();
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
-      <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+    <div className="min-h-screen bg-white flex items-center justify-center py-16 px-4">
+      <div className="max-w-3xl w-full bg-gray-50 shadow-lg rounded-lg overflow-hidden border border-gray-200">
         {/* Blog Header */}
-        <div className="bg-blue-500 text-white p-6">
-          <h1 className="text-3xl font-extrabold">{post.title}</h1>
+        <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6">
+          <h1 className="text-4xl font-bold mb-2">{post.title}</h1>
+          <p className="text-sm text-gray-100">Article ID: #{id}</p>
         </div>
 
         {/* Blog Content */}
-        <div className="p-6">
-          <p className="text-gray-800 text-lg mb-4">{post.body}</p>
-          <p className="text-gray-500 text-sm">Author ID: {post.userId}</p>
+        <div className="p-8">
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            {post.body}
+          </p>
+          <p className="text-sm text-gray-500 font-medium">
+            Written by Author ID:{" "}
+            <span className="text-blue-500">{post.userId}</span>
+          </p>
         </div>
 
         {/* Back Button */}
-        <div className="p-6 border-t border-gray-200">
+        <div className="p-6 bg-gray-100 border-t border-gray-200 flex justify-center">
           <Link href="/">
-            <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-200">
+            <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200">
               Back to Blogs
             </button>
           </Link>

@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
           <div className="h-[100vh]">
             <Navbar />
             {children}
-            <Footer></Footer>
+            <Footer />
           </div>
         </AuthProvider>
       </body>

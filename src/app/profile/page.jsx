@@ -1,25 +1,15 @@
-// import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
+
 "use client"
+import LoadingSpinner from "@/components/LoadingSpinner";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { redirect } from "next/navigation";
 
 const ProfilePage = () => {
   const { isAuthenticated, isLoading } = useKindeBrowserClient();
 
-//   if (!isAuthenticated()) {
-//     login();
-//     return null;
-//   }
-// const { getUser } = getKindeServerSession();
-// const user = getUser();
-
-// console.log(user);
-
 if (isLoading) {
   return (
-    <div className="flex flex-col items-center justify-center mt-12">
-      <h2 className="text-4xl font-semibold">Loading...</h2>
-    </div>
+    <LoadingSpinner />
   )
 }
 
@@ -28,7 +18,7 @@ if (!isAuthenticated) {
 }
 
   return (
-    <div>
+    <div className="min-h-screen bg-white flex items-center justify-center py-16 px-4">
       <h1 className="text-xl font-bold">Welcome to your profile!</h1>
       <button
         // onClick={logout}
