@@ -1,28 +1,3 @@
-// import Link from "next/link";
-
-// export default async function HomePage() {
-//   // Fetch all posts from the mock API
-//   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-//   const posts = await response.json();
-
-//   return (
-//     <div>
-//       <h1 className="text-2xl font-bold mb-4">Blog Posts</h1>
-//       <ul>
-//         {posts.map((post) => (
-//           <li key={post.id} className="mb-2">
-//             <Link href={`/blog/${post.id}`}>
-//               <h2 className="text-blue-500 hover:underline">{post.title}</h2>
-//             </Link>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-
-
 import Link from "next/link";
 
 export default async function HomePage() {
@@ -34,7 +9,7 @@ export default async function HomePage() {
   const limitedPosts = posts.slice(0, 12);
 
   return (
-    <div className="bg-gray-100 min-h-screen py-8 px-4">
+    <div className="bg-gray-100 min-h-screen pt-32">
       {/* Page Title and Description */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-extrabold text-gray-800 mb-2">

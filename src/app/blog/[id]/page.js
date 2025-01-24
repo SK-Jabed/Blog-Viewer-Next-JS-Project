@@ -1,23 +1,3 @@
-// export default async function BlogDetails({ params }) {
-//   const { id } = params;
-
-//   // Fetch the blog details based on the ID
-//   const response = await fetch(
-//     `https://jsonplaceholder.typicode.com/posts/${id}`
-//   );
-//   const post = await response.json();
-
-//   return (
-//     <div>
-//       <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
-//       <p className="text-gray-700">{post.body}</p>
-//       <p className="mt-4 text-sm text-gray-500">Author ID: {post.userId}</p>
-//     </div>
-//   );
-// }
-
-
-
 import Link from "next/link";
 
 export default async function BlogDetails({ params }) {
