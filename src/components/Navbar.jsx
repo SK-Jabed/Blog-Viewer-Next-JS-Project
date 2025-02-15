@@ -31,6 +31,7 @@ const Navbar = () => {
           <Link href="/profile" className="text-gray-800 hover:text-cyan-500">
             Profile
           </Link>
+
           {!isAuthenticated && (
             <>
               <LoginLink postLoginRedirectURL="/profile">
@@ -45,6 +46,7 @@ const Navbar = () => {
               </RegisterLink>
             </>
           )}
+
           {isAuthenticated && (
             <LogoutLink>
               <button className="rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-700">
