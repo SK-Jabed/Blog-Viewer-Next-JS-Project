@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const dynamic = "force-dynamic"; // Ensures dynamic rendering for `page.js`
+export const dynamic = "force-dynamic";
 
 export default async function HomePage({ searchParams }) {
   // Fetch all posts from the mock API
