@@ -3,7 +3,6 @@ import Link from "next/link";
 export default async function BlogDetails({ params }) {
   const { id } = params;
 
-  // Fetch the blog details based on the ID
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}`
   );
