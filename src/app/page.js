@@ -3,11 +3,9 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 export default async function HomePage({ searchParams }) {
-  // Fetch all posts from the mock API
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await response.json();
 
-  // Handle "View All" logic using query parameters
   const showAll = searchParams?.view === "all";
   const limitedPosts = showAll ? posts : posts.slice(0, 12);
 
