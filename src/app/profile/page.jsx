@@ -24,6 +24,7 @@ const ProfilePage = () => {
             {user?.given_name || "User"} {user?.family_name || "User"} !
           </span>
         </h1>
+
         <div className="flex items-center space-x-6 mb-6">
           <img
             src={user?.picture || "/default-avatar.png"}
@@ -41,6 +42,7 @@ const ProfilePage = () => {
             </p>
           </div>
         </div>
+
         <div className="space-y-4">
           <div className="flex justify-between">
             <span className="text-gray-700 font-semibold">Full Name:</span>
